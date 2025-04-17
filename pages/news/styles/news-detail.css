@@ -1,0 +1,400 @@
+.news-detail {
+  position: relative;
+  background-color: rgb(230, 230, 230);
+}
+
+/* Banner Styles */
+.news-banner {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-banner-image-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.news-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.news-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.news-banner-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.news-meta {
+  margin-bottom: 20px;
+}
+
+.news-category,
+.news-date {
+  font-family: "Bruce Forever";
+  font-size: var(--medium-size);
+  padding: 8px 15px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.news-category {
+  background-color: var(--purple-one);
+  color: white;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 50%,
+    calc(100% - 10px) 100%,
+    0 100%
+  );
+}
+
+.news-date {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+}
+
+.news-detail-headline {
+  font-family: "Bruce Forever";
+  font-size: var(--super-size);
+  color: white;
+  text-shadow: 3px 4px 0 rgba(220, 220, 220, 0.3);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Article Styles */
+.news-article {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.article-container {
+  background-color: white;
+  padding: 40px;
+  clip-path: polygon(
+    20px 0,
+    /* atas kiri */ calc(100% - 20px) 0,
+    /* atas kanan */ 100% 20px,
+    /* masuk ke dalam kanan atas */ 100% calc(100% - 20px),
+    /* kanan bawah */ calc(100% - 20px) 100%,
+    /* bawah kanan ke dalam */ 20px 100%,
+    /* bawah kiri ke dalam */ 0 calc(100% - 20px),
+    /* kiri bawah */ 0 20px /* kiri atas ke dalam */
+  );
+}
+
+.article-image-container {
+  margin: 30px 0;
+  position: relative;
+}
+
+.article-image-container.right-align {
+  float: right;
+  margin-left: 30px;
+  width: 45%;
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #eee;
+}
+
+.image-caption {
+  font-family: "Inter SemiBold", Arial, sans-serif;
+  font-size: var(--small-size);
+  color: #777;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.article-content {
+  font-family: "Inter SemiBold", Arial, sans-serif;
+  color: #333;
+  line-height: 1.8;
+}
+
+.article-paragraph {
+  margin-bottom: 20px;
+}
+
+.article-subheading {
+  font-family: "Inter ExtraBold", Arial, sans-serif;
+  font-size: var(--larger-size);
+  color: var(--purple-one);
+  margin: 40px 0 20px;
+  border-bottom: 2px solid var(--purple-one);
+  padding-bottom: 10px;
+}
+
+.article-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.article-list li {
+  margin-bottom: 10px;
+  position: relative;
+  font-family: "Inter SemiBold", Arial, sans-serif;
+}
+
+.article-quote {
+  border-left: 4px solid var(--purple-one);
+  padding: 20px;
+  margin: 30px 0;
+  background-color: #f9f9f9;
+  font-style: italic;
+  color: #555;
+  font-family: "Inter SemiBold", Arial, sans-serif;
+}
+
+/* Article Footer */
+.article-footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tag-label {
+  font-family: "Bruce Forever";
+  color: var(--purple-one);
+  margin-right: 10px;
+}
+
+.article-tag {
+  font-family: "Inter SemiBold", Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 5px 15px;
+  margin-right: 10px;
+  border-radius: 3px;
+  font-size: var(--small-size);
+  font-style: italic;
+}
+
+.author-info {
+  text-align: right;
+}
+
+.author-by {
+  display: block;
+  font-family: "Inter SemiBold", Arial, sans-serif;
+  font-size: var(--small-size);
+  color: #777;
+}
+
+.author-name {
+  font-family: "Bruce Forever";
+  font-family: "Perfect Dark";
+  color: var(--purple-one);
+  font-size: var(--normal-size);
+}
+
+.author-title {
+  display: block;
+  font-family: "Inter SemiBold", Arial, sans-serif;
+  font-size: var(--small-size);
+  color: #777;
+}
+
+/* Related News */
+.related-news {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px 60px;
+}
+
+.related-heading {
+  font-family: "Bruce Forever";
+  font-size: var(--larger-size);
+  color: var(--purple-one);
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.related-heading:after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: var(--purple-one);
+  margin: 15px auto 0;
+}
+
+.related-news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.news-card.small {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+
+  clip-path: polygon(
+    15px 0,
+    /* atas kiri */ calc(100% - 15px) 0,
+    /* atas kanan */ 100% 15px,
+    /* masuk ke dalam kanan atas */ 100% calc(100% - 15px),
+    /* kanan bawah */ calc(100% - 15px) 100%,
+    /* bawah kanan ke dalam */ 15px 100%,
+    /* bawah kiri ke dalam */ 0 calc(100% - 15px),
+    /* kiri bawah */ 0 15px /* kiri atas ke dalam */
+  );
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.news-card.small .news-image-container {
+  height: 180px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.news-card.small .news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.news-card.small .news-category,
+.news-card.small .news-date {
+  position: absolute;
+  z-index: 2;
+  font-family: "Bruce Forever";
+  font-size: 12px;
+  padding: 4px 10px;
+}
+
+.news-card.small .news-category {
+  top: 20px;
+  left: 0;
+  background-color: var(--purple-one);
+  color: white;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 8px) 0,
+    100% 50%,
+    calc(100% - 8px) 100%,
+    0 100%
+  );
+}
+
+.news-card.small .news-date {
+  bottom: 10px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+}
+
+.news-card.small .news-content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card.small .news-headline {
+  font-family: "Bruce Forever";
+  font-size: 18px;
+  color: var(--purple-one);
+  margin-top: auto;
+  transition: color 0.3s ease;
+}
+
+/* Efek hover untuk card kecil */
+.news-card.small:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.news-card.small:hover .news-image {
+  transform: scale(1.05);
+}
+
+.news-card.small:hover .news-headline {
+  color: var(--red-one);
+}
+
+.news-card.small:hover .news-category {
+  background-color: var(--red-one);
+}
+
+@media (max-width: 768px) {
+  .news-detail-headline {
+    font-size: var(--largest-size);
+    color: white;
+  }
+
+  .news-category {
+    margin-bottom: var(--small-size);
+  }
+
+  .author-info {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 696px) {
+  .author-info {
+    text-align: start;
+  }
+}
+
+@media (max-width: 430px) {
+  .news-meta {
+    margin-bottom: var(--small-size);
+  }
+
+  .article-footer {
+    justify-content: center;
+  }
+
+  .author-info {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .news-category,
+  .news-date {
+    font-size: var(--small-size);
+    padding: var(--small-size) var(--small-size);
+  }
+}

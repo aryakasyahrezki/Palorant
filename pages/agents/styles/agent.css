@@ -1,0 +1,444 @@
+.content {
+  background-color: var(--purple-one);
+}
+
+.agent {
+  padding-block: 100px;
+  position: relative;
+  height: 100%;
+}
+
+.agent-container-shadow {
+  position: relative;
+  filter: drop-shadow(0px -14px 10px rgba(0, 0, 0, 0.65));
+}
+
+.agent-container {
+  clip-path: polygon(
+    20% 0,
+    80% 0,
+    100% 15%,
+    100% 85%,
+    80% 100%,
+    20% 100%,
+    0 85%,
+    0 15%
+  );
+  height: 1100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  gap: var(--large-size);
+}
+
+.agent-bottom-shadow {
+  position: absolute;
+  bottom: 15px;
+  height: 850px;
+  width: 100%;
+  filter: drop-shadow(0px 14px 10px rgba(0, 0, 0, 0.65));
+  z-index: -1;
+}
+
+.agent-bottom-shape {
+  position: absolute;
+  bottom: 0;
+  height: 750px;
+  width: 100%;
+  background-color: white;
+  clip-path: polygon(20% 100%, 80% 100%, 100% 80%, 0 80%);
+}
+
+.agent-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--largest-size);
+}
+
+.agent-image-container {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.agent-image-container img {
+  width: 130%;
+}
+
+.agent-description {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.agent-name h2 {
+  font-family: "Perfect Dark";
+  font-size: calc(var(--super-size) * 1.2);
+  letter-spacing: 5px;
+  filter: drop-shadow(3px 4px 5px rgba(255, 0, 0, 0.4));
+}
+
+.agent-role {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--large-size);
+}
+
+.agent-role-image {
+  width: 50px;
+  height: 50px;
+}
+
+.agent-role-text h3 {
+  font-family: "Bruce Forever";
+  font-size: var(--large-size);
+}
+
+.agent-story {
+  padding-block: var(--normal-size);
+}
+
+.agent-story p {
+  font-family: "Inter Bold";
+  font-size: calc(var(--large-size) * 1.2);
+  filter: drop-shadow(3px 4px 5px rgba(255, 0, 0, 0.4));
+  width: 75%;
+}
+
+.agent-skill-container {
+  width: 90%;
+  height: 400px;
+  filter: drop-shadow(0px 14px 10px rgba(0, 0, 0, 0.65));
+}
+
+.agent-skill {
+  width: 100%;
+  height: 100%;
+  background-color: var(--purple-one);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  clip-path: polygon(
+    20% 0,
+    80% 0,
+    100% 35%,
+    100% 65%,
+    80% 100%,
+    20% 100%,
+    0 65%,
+    0 35%
+  );
+  padding: var(--large-size);
+}
+
+.agent-skill-title-special h2 {
+  color: white;
+  font-family: "Perfect Dark";
+  font-size: var(--largest-size);
+  letter-spacing: var(--smallest-size);
+  filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.65));
+}
+
+.agent-skill-content {
+  width: 100%;
+}
+
+.agent-skill-video-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: end;
+  padding-right: var(--large-size);
+}
+
+.agent-skill-video-container video {
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.agent-skill-description {
+  flex: 1;
+  padding: var(--normal-size);
+}
+
+.agent-skill-title h3 {
+  font-family: "Bruce Forever";
+  color: white;
+  filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.65));
+}
+
+.agent-skill-video-desc-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agent-skill-description p {
+  font-family: "Inter Bold";
+  color: white;
+  filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.65));
+  width: 75%;
+}
+
+.agent-skill-icons-container {
+  display: flex;
+  gap: var(--normal-size);
+  padding-top: var(--normal-size);
+}
+
+.skill-icon-wrapper {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.skill-icon-wrapper:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon-wrapper.active {
+  background: var(--purple-one);
+}
+
+.agent-skill-icons {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon-wrapper:hover .agent-skill-icons {
+  transform: scale(1.1);
+}
+
+.skill-video-desc {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.skill-video-desc.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--normal-size);
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 1024px) {
+  .agent-name h2 {
+    font-size: calc(var(--super-size) * 0.8);
+    letter-spacing: 3px;
+  }
+
+  .agent-role {
+    gap: var(--normal-size);
+  }
+
+  .agent-role-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .agent-role-text h3 {
+    font-size: calc(var(--large-size) * 0.8);
+  }
+
+  .agent-story {
+    padding-block: var(--small-size);
+  }
+
+  .agent-story p {
+    font-size: calc(var(--large-size) * 0.8);
+    width: 75%;
+  }
+
+  .agent-skill-title-special h2 {
+    font-size: var(--large-size);
+  }
+
+  .agent-skill-content {
+    margin-top: var(--largest-size);
+  }
+
+  .agent-container {
+    height: 950px;
+  }
+}
+
+@media (max-width: 768px) {
+  .agent-name h2 {
+    font-size: calc(var(--super-size) * 0.5);
+    letter-spacing: 3px;
+  }
+
+  .agent-role {
+    gap: var(--small-size);
+  }
+
+  .agent-role-image {
+    width: 30px;
+    height: 30px;
+  }
+
+  .agent-role-text h3 {
+    font-size: calc(var(--large-size) * 0.6);
+  }
+
+  .agent-story p {
+    font-size: calc(var(--large-size) * 0.5);
+    width: 75%;
+  }
+
+  .agent-skill-title-special {
+    padding-inline: var(--normal-size);
+  }
+
+  .agent-skill-title-special h2 {
+    font-size: var(--normal-size);
+  }
+
+  .agent-skill-content {
+    margin-top: var(--small-size);
+  }
+
+  .agent-container {
+    height: 950px;
+  }
+
+  .agent-skill-icons-container {
+    gap: var(--smallest-size);
+    padding-top: var(--normal-size);
+  }
+
+  .agent-skill-title h3 {
+    font-size: calc(var(--normal-size) * 0.8);
+  }
+
+  .skill-video-desc.active {
+    gap: var(--normal-size);
+  }
+
+  .agent-skill-video-desc-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .agent-skill-video-container {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .agent-skill-video-container video {
+    width: 40%;
+  }
+
+  .agent-skill-description {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .agent-skill-description p {
+    font-size: calc(var(--normal-size) * 0.8);
+  }
+
+  .agent-image-container {
+    width: 50%;
+  }
+
+  .agent-description {
+    width: 50%;
+  }
+}
+
+@media (max-width: 430px) {
+  .agent-container {
+    height: 1025px;
+    justify-content: start;
+  }
+
+  .agent-info {
+    flex-direction: column-reverse;
+    padding-top: var(--largest-size);
+  }
+
+  .agent-image-container {
+    width: 100%;
+    margin-top: -20px;
+  }
+
+  .agent-description {
+    width: 100%;
+    align-items: center;
+    gap: var(--smallest-size);
+  }
+
+  .agent-story {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .agent-name h2 {
+    font-size: var(--large-size);
+    letter-spacing: 1px;
+  }
+
+  .agent-role {
+    gap: var(--normal-size);
+    justify-content: center;
+  }
+
+  .agent-role-image {
+    width: 25px;
+    height: 25px;
+  }
+
+  .agent-role-text h3 {
+    font-size: calc(var(--large-size) * 0.5);
+  }
+
+  .agent-skill-container {
+    padding-top: var(--normal-size);
+  }
+
+  .agent-skill-title-special h2 {
+    font-size: calc(var(--normal-size) * 0.7);
+  }
+
+  .agent-skill-content {
+    margin-top: var(--small-size);
+  }
+
+  .agent-skill-title h3 {
+    font-size: calc(var(--normal-size) * 0.7);
+  }
+
+  .agent-skill-description p {
+    font-size: calc(var(--normal-size) * 0.7);
+  }
+}

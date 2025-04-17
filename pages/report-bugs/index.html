@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Bug</title>
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../report-bugs/styles/report-bugs.css" />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <header>
+      <div class="header-container">
+        <div class="border-hexagon"></div>
+        <div class="clip-path"></div>
+        <div class="navbar">
+          <div class="navbar-container">
+            <div class="mobile-nav-wrapper">
+              <div class="navbar-logo">Palorant</div>
+              <div class="mobile-dropdown-trigger">
+                <div class="dropdown-arrow"></div>
+              </div>
+            </div>
+
+            <!-- Menu Links -->
+            <nav class="navbar-menu">
+              <ul class="navbar-links">
+                <li id="home"><a href="../../index.html">Home</a></li>
+                <li id="agents">
+                  <a href="../agents/index.html">Agent</a>
+                </li>
+                <li id="maps"><a href="../maps/index.html">Maps</a></li>
+                <li id="news"><a href="../news/index.html">News</a></li>
+                <li id="report-bugs">
+                  <a href="." class="report-bug-btn">Report Bug</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Section -->
+    <div class="content">
+      <div class="report-bug">
+        <!-- Top Shape with Title -->
+        <div class="report-bug-top">
+          <div class="report-bug-top-shape">
+            <h1 class="report-bug-title">REPORT BUG</h1>
+          </div>
+        </div>
+
+        <!-- Main Form Container -->
+        <div class="report-bug-container">
+          <form id="bugReportForm" class="bug-report-form">
+            <div class="form-group">
+              <label for="username" class="form-label">USERNAME</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                class="form-input"
+                placeholder="Your in-game name"
+              />
+              <div class="error-message" id="username-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">EMAIL</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="example@domain.com"
+              />
+              <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="server" class="form-label">SERVER REGION</label>
+              <select id="server" name="server" class="form-input">
+                <option value="">Select your server</option>
+                <option value="na">North America</option>
+                <option value="eu">Europe</option>
+                <option value="ap">Asia Pacific</option>
+                <option value="kr">Korea</option>
+                <option value="br">Brazil</option>
+              </select>
+              <div class="error-message" id="server-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="bugDescription" class="form-label"
+                >BUG DESCRIPTION</label
+              >
+              <div class="textarea-container">
+                <textarea
+                  id="bugDescription"
+                  name="bugDescription"
+                  class="form-input textarea"
+                  placeholder="Describe the bug in detail including steps to reproduce..."
+                  rows="4"
+                ></textarea>
+                <div class="error-message" id="description-error"></div>
+              </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="followUp"
+                  name="followUp"
+                  class="form-checkbox"
+                />
+                <label for="followUp" class="checkbox-label"
+                  >I agree to receive follow-up emails about this bug
+                  report</label
+                >
+              </div>
+              <div class="error-message" id="followUp-error"></div>
+            </div>
+
+            <button type="submit" class="submit-button">SUBMIT REPORT</button>
+          </form>
+        </div>
+
+        <!-- Bottom Shape -->
+        <div class="report-bug-bottom">
+          <div class="report-bug-bottom-shape"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-content">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-studio">
+              <img
+                src="../../../assets/images/icons/icon-giotgames.png"
+                alt="Giot Games"
+              />
+              <span>GIOT GAMES</span>
+            </div>
+
+            <span class="footer-logo">PALORANT</span>
+          </div>
+
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="footer-socials">
+            <a href="#"
+              ><img
+                src="../../../assets/images/icons/icon-twitter.png"
+                alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img
+                src="../../../assets/images/icons/icon-instagram.png"
+                alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img
+                src="../../../assets/images/icons/icon-youtube.png"
+                alt="YouTube"
+            /></a>
+            <a href="#"
+              ><img
+                src="../../../assets/images/icons/icon-discord.png"
+                alt="Discord"
+            /></a>
+          </div>
+        </div>
+        <div class="footer-headquarters">
+          <p>Giot Headquarters</p>
+          <p>Los Angeles, California</p>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 GIOT GAMES. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../report-bugs/scripts/report-bugs.js"></script>
+  </body>
+</html>
