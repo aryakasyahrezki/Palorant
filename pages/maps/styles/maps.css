@@ -39,7 +39,7 @@
   width: 70%;
   height: 40%;
   z-index: 1;
-  color: white;
+  color: var(--white-one);
   display: flex;
   justify-self: center;
 }
@@ -51,7 +51,7 @@
 .slider .list .map .map-content .map-text-container h2 {
   font-family: "Perfect Dark";
   font-size: calc(var(--super-size) * 0.8);
-  letter-spacing: var(--small-size);
+  letter-spacing: var(--smallest-size);
   margin-bottom: var(--normal-size);
 }
 
@@ -129,7 +129,7 @@
   width: 40px;
   height: 40px;
   font-size: var(--large-size);
-  color: white;
+  color: var(--white-one);
   transition: 0.5s;
   clip-path: polygon(
     20% 0,
@@ -197,8 +197,9 @@
 .thumbnail .map .map-content {
   position: absolute;
   inset: auto 10px 10px 10px;
-  font-family: "Inter Bold";
-  color: white;
+  font-family: "Bruce Forever";
+  font-size: calc(var(--normal-size) * 0.8);
+  color: var(--white-one);
   filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.8));
   display: flex;
   justify-content: center;
@@ -220,7 +221,12 @@
   left: -50%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to right, transparent, white, transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--white-one),
+    transparent
+  );
   animation: moveLine 2s linear infinite;
 }
 
@@ -250,7 +256,7 @@
 @media (max-width: 768px) {
   .slider .list .map .map-content {
     flex-direction: column;
-    gap: var(--normal-size);
+    gap: var(--large-size);
     width: 100%;
     left: 0;
   }
@@ -265,12 +271,12 @@
   }
 
   .slider .list .map .map-content .map-text-container h2 {
-    font-size: calc(var(--largest-size));
+    font-size: calc(var(--largest-size) * 1.1);
     margin-bottom: var(--small-size);
   }
 
   .slider .list .map .map-content .map-text-container p {
-    font-size: var(--small-size);
+    font-size: calc(var(--small-size) * 1.2);
     width: 40%;
     text-align: center;
   }
@@ -290,23 +296,34 @@
   }
 }
 
+@media (max-width: 576px) {
+  .arrows {
+    top: 63%;
+    right: 35px;
+  }
+}
+
 @media (max-width: 430px) {
   .slider .list .map .map-content .map-text-container h2 {
-    font-size: calc(var(--large-size));
+    font-size: calc(var(--largest-size));
   }
 
   .slider .list .map .map-content .map-minimap-container img {
     width: 50%;
   }
 
-  .arrows {
-    top: 20%;
-    right: 20px;
+  .slider .list .map .map-content .map-text-container p {
+    width: 50%;
   }
 
+  /* .arrows {
+    top: 20%;
+    right: 20px;
+  } */
+
   .arrows button {
-    width: 25px;
-    height: 25px;
-    font-size: var(--small-size);
+    width: 38px;
+    height: 38px;
+    font-size: var(--normal-size);
   }
 }

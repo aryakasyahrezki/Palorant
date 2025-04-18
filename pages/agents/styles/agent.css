@@ -25,7 +25,7 @@
     0 15%
   );
   height: 1100px;
-  background-color: white;
+  background-color: var(--white-one);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +48,7 @@
   bottom: 0;
   height: 750px;
   width: 100%;
-  background-color: white;
+  background-color: var(--white-one);
   clip-path: polygon(20% 100%, 80% 100%, 100% 80%, 0 80%);
 }
 
@@ -142,7 +142,7 @@
 }
 
 .agent-skill-title-special h2 {
-  color: white;
+  color: var(--white-one);
   font-family: "Perfect Dark";
   font-size: var(--largest-size);
   letter-spacing: var(--smallest-size);
@@ -174,7 +174,7 @@
 
 .agent-skill-title h3 {
   font-family: "Bruce Forever";
-  color: white;
+  color: var(--white-one);
   filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.65));
 }
 
@@ -186,7 +186,7 @@
 
 .agent-skill-description p {
   font-family: "Inter Bold";
-  color: white;
+  color: var(--white-one);
   filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.65));
   width: 75%;
 }
@@ -317,7 +317,7 @@
   }
 
   .agent-skill-title-special h2 {
-    font-size: var(--normal-size);
+    font-size: var(--large-size);
   }
 
   .agent-skill-content {
@@ -329,8 +329,15 @@
   }
 
   .agent-skill-icons-container {
-    gap: var(--smallest-size);
+    gap: var(--small-size);
     padding-top: var(--normal-size);
+    display: flex;
+    justify-content: center;
+  }
+
+  .agent-skill-icons {
+    width: 45px;
+    height: 45px;
   }
 
   .agent-skill-title h3 {
@@ -363,7 +370,7 @@
   }
 
   .agent-skill-description p {
-    font-size: calc(var(--normal-size) * 0.8);
+    font-size: calc(var(--normal-size) * 0.7);
   }
 
   .agent-image-container {
@@ -371,6 +378,16 @@
   }
 
   .agent-description {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .agent-skill-title-special h2 {
+    font-size: calc(var(--normal-size) * 0.9);
+    margin-top: -10px;
+  }
+  .agent-skill-video-container video {
     width: 50%;
   }
 }
@@ -387,7 +404,7 @@
   }
 
   .agent-image-container {
-    width: 100%;
+    width: 85%;
     margin-top: -20px;
   }
 
@@ -426,8 +443,33 @@
     padding-top: var(--normal-size);
   }
 
+  .agent-skill-icons-container {
+    gap: var(--smallest-size);
+    display: flex;
+    justify-content: center;
+  }
+
+  .agent-skill-icons {
+    width: 35px;
+    height: 35px;
+  }
+
+  .agent-skill {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 35%,
+      100% 65%,
+      80% 100%,
+      20% 100%,
+      0 65%,
+      0 35%
+    );
+  }
+
   .agent-skill-title-special h2 {
-    font-size: calc(var(--normal-size) * 0.7);
+    font-size: calc(var(--normal-size) * 0.8);
+    margin-top: -10px;
   }
 
   .agent-skill-content {
@@ -439,6 +481,10 @@
   }
 
   .agent-skill-description p {
-    font-size: calc(var(--normal-size) * 0.7);
+    font-size: calc(var(--normal-size) * 0.6);
+  }
+
+  .agent-skill-video-container video {
+    width: 65%;
   }
 }
