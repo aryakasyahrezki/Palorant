@@ -40,20 +40,17 @@
 
 @font-face {
   font-family: "Inter ExtraBold";
-  src: url("../assets/fonts/Inter/static/Inter_18pt-ExtraBold.ttf")
-    format("truetype");
+  src: url("../assets/fonts/Inter_18pt-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Inter Bold";
-  src: url("../assets/fonts/Inter/static/Inter_28pt-Bold.ttf")
-    format("truetype");
+  src: url("../assets/fonts/Inter_28pt-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Inter SemiBold";
-  src: url("../assets/fonts/Inter/static/Inter_24pt-SemiBold.ttf")
-    format("truetype");
+  src: url("../assets/fonts/Inter_24pt-SemiBold.ttf") format("truetype");
 }
 
 ::-webkit-scrollbar {
