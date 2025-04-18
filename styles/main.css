@@ -1,7 +1,9 @@
 :root {
   --purple-one: rgb(79, 35, 137);
   --red-one: rgb(219, 22, 22);
-  --white-one: rgb(240, 240, 240);
+  --white-one: rgb(235, 235, 235);
+  --white-two: rgb(245, 245, 245);
+  --grey-one: rgb(165, 165, 165);
   --shape-button: polygon(
     15px 0%,
     calc(100% - 15px) 0%,
@@ -164,6 +166,14 @@ header {
   font-size: var(--largest-size);
   letter-spacing: 2.5px;
   color: var(--purple-one);
+  cursor: pointer;
+}
+
+.navbar-logo:hover {
+  transform: translateY(-3px) scale(1.05);
+  text-shadow: 2px 2px 0 rgba(123, 97, 255, 0.4),
+    4px 4px 0 rgba(123, 97, 255, 0.3), 6px 6px 0 rgba(123, 97, 255, 0.2);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .navbar-links {
