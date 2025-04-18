@@ -80,6 +80,7 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .agent-image-container {
@@ -125,6 +126,10 @@
   font-size: var(--largest-size);
   color: var(--purple-one);
   padding-inline: 15px;
+}
+
+.agent-card:hover {
+  transform: translateY(-10px);
 }
 
 .agent-card:hover .agent-image {
