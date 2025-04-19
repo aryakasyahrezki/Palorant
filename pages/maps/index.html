@@ -45,28 +45,27 @@
 
     <!-- Content Section -->
     <div class="content">
-      <div class="maps">
-        <!-- Slider -->
-        <div class="slider">
-          <!-- List Items -->
-          <div class="list">
-            <div class="map active">
+      <div class="maps-container">
+        <div class="map-slider">
+          <!-- Main Slides -->
+          <div class="main-slides">
+            <div class="main-slide active">
               <img
                 src="../../assets/images/maps/glacier/map_glacier_compressed.webp"
                 alt="GLACIER"
                 class="active-img"
               />
-              <div class="map-content">
-                <div class="map-text-container">
+              <div class="slide-content">
+                <div class="slide-text">
                   <h2>GLACIER</h2>
                   <p>
                     Your next battleground is a secret Kingdom excavation site
                     overtaken by the arctic. The two plant sites protected by
                     snow and metal require some horizontal finesse. Take
-                    advantage of the ziplines and they’ll never see you coming.
+                    advantage of the ziplines and they'll never see you coming.
                   </p>
                 </div>
-                <div class="map-minimap-container">
+                <div class="slide-minimap">
                   <img
                     src="../../assets/images/maps/glacier/map_glacier_minimap_compressed.webp"
                     alt="Minimap"
@@ -74,23 +73,23 @@
                 </div>
               </div>
             </div>
-            <div class="map">
+            <div class="main-slide">
               <img
                 src="../../assets/images/maps/heaven/map_heaven_compressed.webp"
                 alt="HEAVEN"
                 class="active-img"
               />
-              <div class="map-content">
-                <div class="map-text-container">
+              <div class="slide-content">
+                <div class="slide-text">
                   <h2>HEAVEN</h2>
                   <p>
                     Beneath a forgotten monastery, a clamour emerges from rival
-                    Agents clashing to control three sites. There’s more
+                    Agents clashing to control three sites. There's more
                     territory to control, but defenders can use the extra real
                     estate for aggressive pushes.
                   </p>
                 </div>
-                <div class="map-minimap-container">
+                <div class="slide-minimap">
                   <img
                     src="../../assets/images/maps/heaven/map_heaven_minimap_compressed.webp"
                     alt="Minimap"
@@ -98,14 +97,14 @@
                 </div>
               </div>
             </div>
-            <div class="map">
+            <div class="main-slide">
               <img
                 src="../../assets/images/maps/dreeze/map_dreeze_compressed.webp"
                 alt="DREEZE"
                 class="active-img"
               />
-              <div class="map-content">
-                <div class="map-text-container">
+              <div class="slide-content">
+                <div class="slide-text">
                   <h2>DREEZE</h2>
                   <p>
                     Take in the sights of historic ruins or seaside caves on
@@ -114,7 +113,7 @@
                     Watch your flanks and this will be a Dreeze.
                   </p>
                 </div>
-                <div class="map-minimap-container">
+                <div class="slide-minimap">
                   <img
                     src="../../assets/images/maps/dreeze/map_dreeze_minimap_compressed.webp"
                     alt="Minimap"
@@ -122,22 +121,22 @@
                 </div>
               </div>
             </div>
-            <div class="map">
+            <div class="main-slide">
               <img
                 src="../../assets/images/maps/bend/map_bend_compressed.webp"
                 alt="BEND"
                 class="active-img"
               />
-              <div class="map-content">
-                <div class="map-text-container">
+              <div class="slide-content">
+                <div class="slide-text">
                   <h2>BEND</h2>
                   <p>
-                    Two sites. No middle. Gotta pick left or right. What’s it
+                    Two sites. No middle. Gotta pick left or right. What's it
                     going to be then? Both offer direct paths for attackers and
                     a pair of one-way teleporters make it easier to flank.
                   </p>
                 </div>
-                <div class="map-minimap-container">
+                <div class="slide-minimap">
                   <img
                     src="../../assets/images/maps/bend/map_bend_minimap_compressed.webp"
                     alt="Minimap"
@@ -145,24 +144,24 @@
                 </div>
               </div>
             </div>
-            <div class="map">
+            <div class="main-slide">
               <img
                 src="../../assets/images/maps/escent/map_escent_compressed.webp"
                 alt="ESCENT"
                 class="active-img"
               />
-              <div class="map-content">
-                <div class="map-text-container">
+              <div class="slide-content">
+                <div class="slide-text">
                   <h2>ESCENT</h2>
                   <p>
                     An open playground for small wars of position and attrition
                     divide two sites on Escent. Each site can be fortified by
-                    irreversible bomb doors; once they’re down, you’ll have to
+                    irreversible bomb doors; once they're down, you'll have to
                     destroy them or find another way. Yield as little territory
                     as possible.
                   </p>
                 </div>
-                <div class="map-minimap-container">
+                <div class="slide-minimap">
                   <img
                     src="../../assets/images/maps/escent/map_escent_minimap_compressed.webp"
                     alt="Minimap"
@@ -170,14 +169,14 @@
                 </div>
               </div>
             </div>
-            <div class="map">
+            <div class="main-slide">
               <img
                 src="../../assets/images/maps/sunsetion/map_sunsetion_compressed.webp"
                 alt="SUNSETION"
                 class="active-img"
               />
-              <div class="map-content">
-                <div class="map-text-container">
+              <div class="slide-content">
+                <div class="slide-text">
                   <h2>SUNSETION</h2>
                   <p>
                     A disaster at a local kingdom facility threatens to engulf
@@ -186,7 +185,7 @@
                     map.
                   </p>
                 </div>
-                <div class="map-minimap-container">
+                <div class="slide-minimap">
                   <img
                     src="../../assets/images/maps/sunsetion/map_sunsetion_minimap_compressed.webp"
                     alt="Minimap"
@@ -196,55 +195,55 @@
             </div>
           </div>
 
-          <!-- Button Arrows -->
-          <div class="arrows">
-            <button class="prev" id="prev"><-</button>
-            <button class="next" id="next">-></button>
+          <!-- Navigation Arrows -->
+          <div class="slider-arrows">
+            <button class="arrow-prev" id="prev"><-</button>
+            <button class="arrow-next" id="next">-></button>
           </div>
 
-          <!-- Thumbnail -->
-          <div class="thumbnail">
-            <div class="map active">
+          <!-- Thumbnails -->
+          <div class="slide-thumbnails">
+            <div class="slide-thumbnail active">
               <img
                 src="../../assets/images/maps/glacier/map_glacier_compressed.webp"
                 alt="GLACIER"
               />
-              <div class="map-content">Glacier</div>
+              <div class="thumbnail-caption">Glacier</div>
             </div>
-            <div class="map">
+            <div class="slide-thumbnail">
               <img
                 src="../../assets/images/maps/heaven/map_heaven_compressed.webp"
                 alt="HEAVEN"
               />
-              <div class="map-content">Heaven</div>
+              <div class="thumbnail-caption">Heaven</div>
             </div>
-            <div class="map">
+            <div class="slide-thumbnail">
               <img
                 src="../../assets/images/maps/dreeze/map_dreeze_compressed.webp"
                 alt="DREEZE"
               />
-              <div class="map-content">Dreeze</div>
+              <div class="thumbnail-caption">Dreeze</div>
             </div>
-            <div class="map">
+            <div class="slide-thumbnail">
               <img
                 src="../../assets/images/maps/bend/map_bend_compressed.webp"
                 alt="BEND"
               />
-              <div class="map-content">Bend</div>
+              <div class="thumbnail-caption">Bend</div>
             </div>
-            <div class="map">
+            <div class="slide-thumbnail">
               <img
                 src="../../assets/images/maps/escent/map_escent_compressed.webp"
                 alt="ESCENT"
               />
-              <div class="map-content">Escent</div>
+              <div class="thumbnail-caption">Escent</div>
             </div>
-            <div class="map">
+            <div class="slide-thumbnail">
               <img
                 src="../../assets/images/maps/sunsetion/map_sunsetion_compressed.webp"
                 alt="SUNSETION"
               />
-              <div class="map-content">Sunsetion</div>
+              <div class="thumbnail-caption">Sunsetion</div>
             </div>
           </div>
         </div>

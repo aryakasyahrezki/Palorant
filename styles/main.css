@@ -63,7 +63,7 @@
   box-sizing: border-box;
   text-decoration: none;
   border: none;
-  font-family: "Inter Bold", "Inter SemiBold", sans-serif;
+  font-family: "Inter Bold", "Inter SemiBold", Arial, sans-serif;
 }
 
 body {

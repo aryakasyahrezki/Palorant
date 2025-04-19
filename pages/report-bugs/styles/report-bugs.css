@@ -32,12 +32,10 @@
   font-size: var(--super-size);
   text-align: center;
   padding-inline: var(--largest-size);
-  /* color: var(--purple-one); */
   color: black;
   text-shadow: 3px 4px 5px var(--red-two);
 }
 
-/* Form Container */
 .report-bug-container {
   padding: 20px var(--super-size);
   display: flex;
@@ -52,17 +50,16 @@
   padding: 40px;
   clip-path: polygon(
     20px 0,
-    /* atas kiri */ calc(100% - 20px) 0,
-    /* atas kanan */ 100% 20px,
-    /* masuk ke dalam kanan atas */ 100% calc(100% - 20px),
-    /* kanan bawah */ calc(100% - 20px) 100%,
-    /* bawah kanan ke dalam */ 20px 100%,
-    /* bawah kiri ke dalam */ 0 calc(100% - 20px),
-    /* kiri bawah */ 0 20px /* kiri atas ke dalam */
+    calc(100% - 20px) 0,
+    100% 20px,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    20px 100%,
+    0 calc(100% - 20px),
+    0 20px
   );
 }
 
-/* Form Elements */
 .form-group {
   margin-bottom: 25px;
 }
@@ -91,7 +88,6 @@
   outline: none;
 }
 
-/* Textarea with Auto-Expanding */
 .textarea-container {
   position: relative;
 }
@@ -128,7 +124,6 @@
   color: #555;
 }
 
-/* Error states */
 .checkbox-group.error .checkbox-label {
   color: var(--red-one);
 }
@@ -140,10 +135,9 @@
 
 #followUp-error {
   margin-top: 5px;
-  margin-left: 28px; /* Matches checkbox width + margin */
+  margin-left: 28px;
 }
 
-/* Button */
 .submit-button {
   width: 100%;
   padding: 15px;
@@ -163,7 +157,6 @@
   background-color: var(--red-one);
 }
 
-/* Error States */
 .error-message {
   color: var(--red-one);
   font-family: "Inter SemiBold";
@@ -176,7 +169,6 @@
   border-color: var(--red-one);
 }
 
-/* Bottom Shape - Same as News Page */
 .report-bug-bottom {
   position: relative;
   height: 400px;

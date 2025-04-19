@@ -1,14 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".slider .list .map");
+  const items = document.querySelectorAll(".main-slide");
   const next = document.getElementById("next");
   const prev = document.getElementById("prev");
-  const thumbnails = document.querySelectorAll(".thumbnail .map");
+  const thumbnails = document.querySelectorAll(".slide-thumbnail");
+  const sliderContainer = document.querySelector(".map-slider");
   const countItem = items.length;
+
   let itemActive = 0;
   let autoSlideInterval;
   let interactionTimeout;
-  const AUTO_SLIDE_DELAY = 7000;
-  const NORMAL_SLIDE_DELAY = 5000;
+
+  const AUTO_SLIDE_DELAY = 7000; // 7s pause after interaction
+  const NORMAL_SLIDE_DELAY = 5000; // 5s between slides
 
   function handleUserInteraction() {
     clearInterval(autoSlideInterval);
@@ -25,21 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function goToNext() {
     itemActive = (itemActive + 1) % countItem;
-    showSlider();
+    updateSlider();
   }
 
   function goToPrev() {
     itemActive = (itemActive - 1 + countItem) % countItem;
-    showSlider();
+    updateSlider();
   }
 
-  function showSlider() {
-    document.querySelectorAll(".slider .list .map.active").forEach((item) => {
-      item.classList.remove("active");
-    });
-    document.querySelectorAll(".thumbnail .map.active").forEach((thumb) => {
-      thumb.classList.remove("active");
-    });
+  function updateSlider() {
+    document
+      .querySelectorAll(".main-slide.active, .slide-thumbnail.active")
+      .forEach((el) => {
+        el.classList.remove("active");
+      });
 
     items[itemActive].classList.add("active");
     if (thumbnails[itemActive]) {
@@ -47,16 +49,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function initSlider() {
-    startAutoSlide(NORMAL_SLIDE_DELAY);
-
+  function setupEventListeners() {
     if (next && prev) {
-      next.addEventListener("click", function () {
+      next.addEventListener("click", () => {
         handleUserInteraction();
         goToNext();
       });
 
-      prev.addEventListener("click", function () {
+      prev.addEventListener("click", () => {
         handleUserInteraction();
         goToPrev();
       });
@@ -66,9 +66,23 @@ document.addEventListener("DOMContentLoaded", function () {
       thumbnail.addEventListener("click", () => {
         handleUserInteraction();
         itemActive = index;
-        showSlider();
+        updateSlider();
       });
     });
+
+    if (sliderContainer) {
+      sliderContainer.addEventListener("click", (e) => {
+        if (!e.target.closest(".slider-arrows, .slide-thumbnail")) {
+          handleUserInteraction();
+        }
+      });
+    }
+  }
+
+  function initSlider() {
+    setupEventListeners();
+    startAutoSlide(NORMAL_SLIDE_DELAY);
+    updateSlider();
   }
 
   initSlider();
