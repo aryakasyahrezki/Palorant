@@ -66,8 +66,29 @@
 }
 
 /* === Description Section === */
+.logo-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.logo-image {
+  width: 600px;
+  height: 600px;
+  opacity: 0.2;
+  object-fit: contain;
+}
+
 .description-section {
   position: relative;
+  z-index: 0;
   width: 100%;
   height: 800px;
   padding-inline: var(--super-size);
@@ -519,6 +540,11 @@
     height: 600px;
   }
 
+  .logo-image {
+    width: 500px;
+    height: 500px;
+  }
+
   .description-content {
     height: 600px;
   }
@@ -657,6 +683,11 @@
   /* === Description Section 768px === */
   .description-section {
     height: 650px;
+  }
+
+  .logo-image {
+    width: 400px;
+    height: 400px;
   }
 
   .description-content {
@@ -850,6 +881,11 @@
   /* === Description Section 430px === */
   .description-section {
     height: 650px;
+  }
+
+  .logo-image {
+    width: 300px;
+    height: 300px;
   }
 
   .description-content {

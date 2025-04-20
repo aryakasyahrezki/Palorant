@@ -46,6 +46,9 @@
   margin: 0 auto;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-size);
 }
 
 .news-meta {
@@ -77,6 +80,28 @@
   background-color: rgba(255, 255, 255, 0.9);
   color: #333;
   clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+}
+
+.news-logo-badge {
+  height: 60px;
+  width: 100px;
+  background-color: var(--purple-one);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 20px) 0,
+    100% 50%,
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+  display: flex;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .news-detail-headline {
@@ -291,8 +316,8 @@
   transition: transform 0.3s ease;
 }
 
-.news-category,
-.news-date {
+.news-card.small .news-category,
+.news-card.small .news-date {
   position: absolute;
   z-index: 2;
   font-family: "Bruce Forever";
@@ -300,7 +325,7 @@
   padding: 4px 10px;
 }
 
-.news-category {
+.news-card.small .news-category {
   top: 20px;
   left: 0;
   background-color: var(--purple-one);
@@ -314,7 +339,7 @@
   );
 }
 
-.news-date {
+.news-card.small .news-date {
   bottom: 10px;
   right: 0;
   background-color: rgba(255, 255, 255, 0.9);
@@ -322,14 +347,40 @@
   clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%, 0 50%);
 }
 
-.news-content {
+.news-card.small .news-logo-badge {
+  position: absolute;
+  height: 40px;
+  top: 109px;
+  width: 100px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  clip-path: polygon(37px 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  z-index: 2;
+  transition: all 0.3s ease;
+  padding-left: 15px;
+}
+
+.news-card.small .logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.news-card:hover .news-logo-badge {
+  background-color: var(--red-one);
+}
+
+.news-card.small .news-content {
   padding: 15px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.news-headline {
+.news-card.small .news-headline {
   font-family: "Bruce Forever";
   font-size: var(--normal-size);
   color: var(--purple-one);
@@ -394,8 +445,41 @@
     padding: var(--small-size) var(--small-size);
   }
 
+  .news-logo-badge {
+    height: 30px;
+    width: 60px;
+    padding-right: 7px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0,
+      100% 50%,
+      calc(100% - 20px) 100%,
+      0 100%
+    );
+  }
+
+  .logo-icon {
+    width: 30px;
+    height: 30px;
+  }
+
   .related-news-container {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .news-card.small .news-logo-badge {
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    top: 109px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    clip-path: polygon(37px 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    z-index: 2;
+    transition: all 0.3s ease;
+    padding-left: 15px;
   }
 }
 

@@ -100,6 +100,31 @@
   transition: transform 0.5s ease;
 }
 
+/* Logo Badge Styles */
+.news-logo-badge {
+  position: absolute;
+  top: 119px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding-block: 0;
+  padding-left: 44px;
+  padding-right: 14px;
+  clip-path: polygon(37px 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.news-card:hover .news-logo-badge {
+  background-color: var(--red-one);
+}
+
 .news-category {
   position: absolute;
   top: 30px;
