@@ -17,6 +17,8 @@
   position: relative;
   max-height: 700px;
   max-width: 1300px;
+  display: flex;
+  justify-content: center;
 }
 
 .main-slide {
@@ -123,31 +125,48 @@
 }
 
 .slider-arrows {
+  width: 90%;
   position: absolute;
-  top: 30%;
-  right: 65px;
+  bottom: 32%;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+.arrow-prev {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0 50%,
+    0 50%
+  );
+}
+
+.arrow-next {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 50%,
+    100% 50%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
 }
 
 .slider-arrows button {
   background-color: var(--white-one);
   border: none;
   font-family: "Inter Bold";
-  width: 40px;
-  height: 40px;
-  font-size: var(--large-size);
+  width: 60px;
+  height: 50px;
+  font-size: var(--largest-size);
   color: var(--purple-one);
   transition: 0.2s;
-  clip-path: polygon(
-    20% 0,
-    80% 0,
-    100% 20%,
-    100% 80%,
-    80% 100%,
-    20% 100%,
-    0 80%,
-    0 20%
-  );
 }
 
 .slider-arrows button:hover {
@@ -294,18 +313,6 @@
   .slide-minimap img {
     width: 40%;
   }
-
-  .slider-arrows {
-    top: 20%;
-    right: 35px;
-  }
-}
-
-@media (max-width: 576px) {
-  .slider-arrows {
-    top: 63%;
-    right: 35px;
-  }
 }
 
 @media (max-width: 430px) {
@@ -322,8 +329,8 @@
   }
 
   .slider-arrows button {
-    width: 38px;
-    height: 38px;
-    font-size: var(--normal-size);
+    width: 50px;
+    height: 40px;
+    font-size: var(--large-size);
   }
 }
