@@ -70,13 +70,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--purple-one);
+  background-color: black;
 }
 
 .content {
   position: relative;
   width: 100vw;
-  max-width: 1300px;
   background-color: var(--purple-one);
 }
 
@@ -212,10 +211,6 @@ header {
   background-color: var(--red-one);
 }
 
-footer {
-  max-width: 1300px;
-}
-
 .footer-section {
   width: 100%;
   background-color: black;
@@ -223,9 +218,11 @@ footer {
   padding: var(--super-size) 0 var(--large-size);
   display: flex;
   justify-content: center;
+  align-items: start;
 }
 
 .footer-content {
+  max-width: 1300px;
   width: 100%;
   padding-inline: var(--large-size);
   display: flex;

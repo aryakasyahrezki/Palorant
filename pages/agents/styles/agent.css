@@ -1,11 +1,14 @@
 .content {
   background-color: var(--purple-one);
+  display: flex;
+  justify-content: center;
 }
 
 .agent {
   padding-block: 100px;
   position: relative;
   height: 100%;
+  max-width: 1300px;
 }
 
 .agent-container-shadow {
