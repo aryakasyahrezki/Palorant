@@ -1,0 +1,469 @@
+.map-detail {
+  background-color: var(--purple-one);
+  color: var(--white-one);
+}
+
+.map-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  max-height: 500px;
+  overflow: hidden;
+  filter: drop-shadow(0px 14px 10px rgba(0, 0, 0, 0.65));
+}
+
+#banner-image {
+  height: 100%;
+}
+
+.map-hero-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--largest-size);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  display: flex;
+  justify-content: center;
+}
+
+.map-title {
+  max-width: 1300px;
+  font-family: "Perfect Dark";
+  font-size: var(--super-size);
+  margin-bottom: var(--small-size);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+}
+
+.map-callouts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.callout {
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.callout:hover .callout-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.callout-marker {
+  width: 20px;
+  height: 20px;
+  background-color: var(--red-one);
+  border-radius: 50%;
+  border: 2px solid var(--white-one);
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.callout-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 10px);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-family: "Bruce Forever";
+  font-size: var(--small-size);
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.3s ease;
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 20%,
+    100% 80%,
+    90% 100%,
+    10% 100%,
+    0 80%,
+    0 20%
+  );
+}
+
+.callout.overview {
+  top: 70%;
+  left: 50%;
+}
+
+.callout.a-site {
+  top: 65%;
+  left: 25%;
+}
+
+.callout.b-site {
+  top: 65%;
+  left: 75%;
+}
+
+.callout.mid {
+  top: 45%;
+  left: 50%;
+}
+
+.callout.overview .callout-marker {
+  width: 18px;
+  height: 18px;
+  background-color: var(--white-one);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.callout.active.overview .callout-marker {
+  box-shadow: 0 0 0 2px var(--white-one);
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.callout:not(.overview).active .callout-marker {
+  background-color: var(--red-one);
+  box-shadow: 0 0 0 2px var(--white-one);
+}
+
+.callout .callout-label {
+  opacity: 0;
+  transform: translate(-50%, 10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.callout:hover .callout-label,
+.callout.active .callout-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.callout.active .callout-marker {
+  background-color: var(--red-one);
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 0 2px var(--white-one);
+}
+
+.callout.overview.active .callout-marker {
+  background-color: var(--white-one);
+}
+
+.map-tactical {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: var(--super-size);
+  gap: var(--normal-size);
+  padding-bottom: var(--normal-size);
+}
+
+.tactical-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--normal-size);
+}
+
+.tactical-title {
+  font-family: "Bruce Forever";
+  font-size: var(--large-size);
+  color: var(--white-one);
+  margin-bottom: var(--normal-size);
+  position: relative;
+}
+
+.tactical-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: var(--white-one);
+  margin-top: var(--small-size);
+}
+
+.tactical-description {
+  font-family: "Inter SemiBold";
+  font-size: var(--normal-size);
+  line-height: 1.6;
+  margin-bottom: var(--large-size);
+}
+
+.tactical-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--large-size);
+}
+
+.tactical-feature {
+  background-color: var(--white-one);
+  padding: var(--normal-size) calc(var(--normal-size) * 1.4);
+  color: var(--purple-one);
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 20%,
+    100% 80%,
+    90% 100%,
+    10% 100%,
+    0 80%,
+    0 20%
+  );
+}
+
+.tactical-feature h3 {
+  font-family: "Bruce Forever";
+  font-size: var(--normal-size);
+  margin-bottom: var(--small-size);
+}
+
+.tactical-feature p {
+  font-family: "Inter SemiBold";
+  font-size: calc(var(--normal-size) * 0.7);
+  opacity: 0.9;
+}
+
+.tactical-diagram {
+  flex: 1;
+  display: flex;
+  align-items: start;
+  justify-content: end;
+}
+
+.tactical-diagram img {
+  max-width: 100%;
+  max-height: 90%;
+  border: 2px solid var(--white-one);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.map-gallery {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 var(--super-size) var(--largest-size);
+}
+
+.gallery-title {
+  font-family: "Bruce Forever";
+  font-size: var(--large-size);
+  color: var(--white-one);
+  text-align: center;
+  margin-bottom: var(--largest-size);
+}
+
+.gallery-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: var(--white-one);
+  margin-top: var(--small-size);
+  justify-self: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--normal-size);
+}
+
+.gallery-item {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 12%,
+    100% 88%,
+    90% 100%,
+    10% 99%,
+    0 88%,
+    0 12%
+  );
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+  padding: var(--small-size);
+  font-family: "Bruce Forever";
+  text-align: center;
+  font-size: calc(var(--normal-size));
+}
+
+.map-tips {
+  background-color: var(--white-one);
+  color: var(--purple-one);
+  padding: var(--super-size);
+}
+
+.tips-title {
+  font-family: "Bruce Forever";
+  font-size: var(--large-size);
+  color: var(--red-one);
+  text-align: center;
+  margin-bottom: var(--largest-size);
+}
+
+.tips-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: var(--red-one);
+  margin-top: var(--small-size);
+  justify-self: center;
+}
+
+.tips-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--largest-size);
+}
+
+.tip-card {
+  background-color: rgb(230, 230, 230);
+  padding: var(--largest-size);
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 20%,
+    100% 80%,
+    90% 100%,
+    10% 100%,
+    0 80%,
+    0 20%
+  );
+}
+
+.tip-card h3 {
+  font-family: "Bruce Forever";
+  font-size: var(--normal-size);
+  color: var(--red-one);
+  margin-bottom: var(--normal-size);
+  border-bottom: 2px solid var(--red-one);
+  padding-bottom: var(--small-size);
+}
+
+.tip-card ul {
+  font-family: "Inter";
+  padding-left: var(--normal-size);
+}
+
+.tip-card li {
+  margin-bottom: var(--small-size);
+}
+
+@media (max-width: 1024px) {
+  .map-tactical {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-title {
+    font-size: calc(var(--super-size) * 0.8);
+  }
+
+  .map-hero {
+    height: 50vh;
+  }
+
+  .map-gallery {
+    margin-top: var(--small-size);
+  }
+
+  .tactical-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tactical-description {
+    text-align: center;
+  }
+
+  .tactical-feature h3 {
+    font-size: calc(var(--normal-size) * 0.8);
+  }
+
+  .tactical-diagram {
+    margin-top: var(--largest-size);
+  }
+
+  .gallery-item {
+    height: 150px;
+  }
+}
+
+@media (max-width: 430px) {
+  .map-title {
+    font-size: calc(var(--super-size) * 0.6);
+  }
+
+  .map-tactical {
+    padding: calc(var(--largest-size) * 1.2);
+  }
+
+  .map-meta {
+    flex-direction: column;
+    gap: 5px;
+    font-size: var(--small-size);
+  }
+
+  .map-gallery {
+    padding-inline: calc(var(--largest-size) * 1.2);
+  }
+
+  .gallery-title {
+    font-size: calc(var(--large-size) * 0.8);
+  }
+
+  .gallery-item {
+    height: 120px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .gallery-caption {
+    font-size: calc(var(--normal-size) * 0.8);
+  }
+
+  .map-tips {
+    padding-inline: calc(var(--largest-size) * 1.2);
+  }
+
+  .tips-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

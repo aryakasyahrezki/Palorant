@@ -127,7 +127,8 @@
   align-items: center;
   justify-content: center;
   font-family: "Perfect Dark";
-  font-size: var(--largest-size);
+  font-family: "Bruce Forever";
+  font-size: calc(var(--largest-size) * 0.8);
   color: var(--purple-one);
   padding-inline: 15px;
 }
