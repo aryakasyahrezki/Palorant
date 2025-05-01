@@ -428,7 +428,6 @@
   text-align: center;
   font-family: "Inter ExtraBold";
   font-size: calc(var(--normal-size) * 1.1);
-  letter-spacing: 1px;
   filter: drop-shadow(1px 1px 1px var(--grey-one));
 }
 
@@ -1004,7 +1003,7 @@
   }
 
   .map-header {
-    width: 90%;
+    width: 100%;
   }
 
   .map-header h1 {
