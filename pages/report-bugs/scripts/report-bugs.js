@@ -52,7 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
       emailInput.classList.add("error");
       emailError.textContent = "Email cannot be blank";
       return false;
-    } else if (!email.includes("@") || !email.includes(".")) {
+    }
+    const atIndex = email.indexOf("@");
+    const dotIndex = email.lastIndexOf(".");
+    if (
+      atIndex <= 0 ||
+      dotIndex <= atIndex + 1 ||
+      dotIndex === email.length - 1 ||
+      email[atIndex + 1] === "."
+    ) {
       emailInput.classList.add("error");
       emailError.textContent = "Please enter a valid email";
       return false;
